@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>預約幫手設定</title>
+        <link rel="stylesheet" href="library/notyf/notyf.min.css" />
+        <link rel="stylesheet" href="options.css" />
+    </head>
+    <body>
+        <div class="setting">
+            <h2>使用者設定</h2>
+
+            <div class="input-group">
+                <label for="username"> 帳號 </label>
+                <input type="text" id="username" placeholder="帳號" /><br />
+            </div>
+
+            <div class="input-group">
+                <label for="password"> 密碼 </label>
+                <input type="password" id="password" placeholder="密碼" /><br />
+            </div>
+
+            <div class="input-group">
+                <label for="realName"> 預約人 </label>
+                <input type="text" id="realName" placeholder="預約人" /><br />
+            </div>
+
+            <div class="input-group">
+                <label for="defaultTime">預設預約時間（30 分鐘單位）</label>
+                <select id="defaultTime"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="autoSubmit">自動送出預約表單</label>
+                <input type="checkbox" id="autoSubmit" />
+            </div>
+
+            <div class="buttons">
+                <button id="saveBtn">儲存</button>
+                <button id="clearSettings">清除設定</button>
+            </div>
+        </div>
+        <script src="library/notyf/notyf.min.js"></script>
+        <script src="options.js"></script>
+    </body>
+</html>
