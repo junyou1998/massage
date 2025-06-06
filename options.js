@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('password').value = data.password || '';
     document.getElementById('realName').value = data.realName || '';
     document.getElementById('autoSubmit').checked = data.autoSubmit || false;
-    document.getElementById("defaultTime").value = data.defaultTime || "09-30";
+    document.getElementById("defaultTime").value = data.defaultTime || "10-00";
   });
 });
 

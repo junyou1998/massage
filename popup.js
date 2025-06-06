@@ -2,7 +2,7 @@ const container = document.getElementById("buttonsContainer");
 
 const today = new Date();
 const year = today.getFullYear();
-const month = today.getMonth();
+const month = today.getMonth()+1;
 
 function getThursdaysOfMonth(year, month) {
   const thursdays = [];
@@ -18,7 +18,7 @@ function getThursdaysOfMonth(year, month) {
 
 const thursdays = getThursdaysOfMonth(year, month);
 chrome.storage.local.get(["defaultTime"], (data) => {
-  const [hour, minute] = (data.defaultTime || "17-0").split("-");
+  const [hour, minute] = (data.defaultTime || "10-0").split("-");
   
   thursdays.forEach(date => {
     const d = date.getDate();
@@ -75,7 +75,7 @@ chrome.storage.local.get(["username", "password", "realName", "defaultTime"], (d
       opt.textContent = label;
 
       // 🔸 預設選中 17:00
-      if (h === 17 && m === 0) opt.selected = true;
+      if (h === 10 && m === 0) opt.selected = true;
 
       timeSelect.appendChild(opt);
     }
